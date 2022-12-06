@@ -6,27 +6,27 @@ import {
   SafeAreaView, 
   StatusBar, 
   Alert, 
-  Platform
+  Platform,
+  ImageBackground,
+  Image
 } from 'react-native';
+import CustomText from './styles/customText';
+
+import styles from './styles/styles';
+
 
 export default function App() {
-  console.log(Dimensions.get('screen'));
   return (
     <SafeAreaView style={styles.container}>
-     <View style={styles.viewFormat}></View>
+    <ImageBackground source={require('./assets/background.jpg')} style={styles.image} >
+    
+      <View style={styles.viewFormat}>
+     <Image source={require('./assets/logo-red.png')} style={styles.image1} resizeMode='contain'/>
+     </View>
+    <CustomText style={styles.textDec}>Sell What You Don't Need</CustomText>
+    <View></View>
+    </ImageBackground>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFF',
-   paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight: 0
-  },
-  viewFormat: {
-    backgroundColor: 'dodgerblue',
-    width: "50%",
-    height: 70
-  }
-});
