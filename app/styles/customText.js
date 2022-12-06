@@ -4,10 +4,10 @@ import {
   StyleSheet,
 } from 'react-native';
 
-export default function CustomText(props) {
+export default function CustomText(children) {
   return (
     <Text style={[styles.defaultStyle, props.style]}>
-      {props.children}
+      {children}
     </Text>
   );
 }
