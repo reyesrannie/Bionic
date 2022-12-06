@@ -1,28 +1,18 @@
-import { 
-    View, 
-    SafeAreaView, 
-    ImageBackground,
-    Image
-  } from 'react-native';
-  import CustomText from '../styles/customText';
-  
-  import styles from '../styles/styles';
-  
-  
-  export default function LoginScreen() {
-    return (
-      <SafeAreaView style={styles.container}>
-      <ImageBackground source={require('../assets/background.jpg')} style={styles.image} >
-        <View style={styles.logoContainer}>
-       <Image source={require('../assets/logo-red.png')} style={styles.logo} resizeMode='contain'/>
-       </View>
-      <CustomText style={styles.textDec}>Sell What You Don't Need</CustomText>
-      <View style={styles.bottomContainer}>
-      <View style={styles.signUpContainer}></View>
-      <View style={styles.logInContainer}></View>
+import React from 'react';
+import {ImageBackground, View, Image, SafeAreaView, Text} from 'react-native';
+import styles from '../styles/styles';
+
+function LoginScreen(props) {
+  return (
+    <ImageBackground source={require('../assets/background.jpg')} style={styles.background} >
+      <View style={styles.logoContainer}>
+      <Image source={require('../assets/logo-red.png')} style={styles.logo}/>
+      <Text>Sell What You Don't Need</Text>
       </View>
-      </ImageBackground>
-      </SafeAreaView>
-    );
-  }
-  
+      <View style={styles.loginButton}></View> 
+      <View style={styles.registerButton}></View> 
+    </ImageBackground>
+  );
+}
+
+export default LoginScreen;

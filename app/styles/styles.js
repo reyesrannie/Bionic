@@ -1,47 +1,64 @@
-import { StyleSheet, StatusBar } from 'react-native';
+import { StyleSheet } from 'react-native';
+import colors from './colors';
 
 
 export default StyleSheet.create({
-    container: {
-      alignItems: 'center',
+      //Welcome Screen
+      background: {
         flex: 1,
-       paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight: 0
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+      },
+      logo: {
+        width: 100,
+        height: 100,    
       },
       logoContainer: {
-        marginTop: "10%",
-        alignSelf: 'center',
-        width: "25%",
-        height: "15%",
         alignItems: 'center',
-       
+        position: 'absolute',
+        top: 70,
+      },
+      loginButton: {
+        width: '100%',
+        height: 70,
+        backgroundColor: colors.primary,
+      },
+      registerButton: {
+        width: '100%',
+        height: 70,
+        backgroundColor: colors.secondary
+      }, 
+      //ViewScreen
+      container: {
+        backgroundColor: colors.black,
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+      },
+      closeIcon: {
+        width: 50,
+        height: 50,
+        backgroundColor: colors.primary,
+        position: "absolute",
+        top: 40,
+        left: 30
+      },
+      deleteIcon: {
+        width: 50,
+        height: 50,
+        backgroundColor: colors.secondary,
+        position: "absolute",
+        top: 40,
+        right: 30
+      },
+      imageContainer: {
+        width: "100%",
+        height: "85%",
       },
       image: {
         width: "100%",
-        height: "100%"
-      },
-    
-      logo: {
-        margin: 0,
-        flex: 1,
-      },
-textDec: {
-  alignSelf: 'center',
-},
-
-bottomContainer: {
-  flex: 1,
-  justifyContent: 'flex-end',
-},
-signUpContainer: {
-  backgroundColor: '#ed5f55',
-  width: '100%',
-  height: '10%'
-},
-logInContainer: {
-  backgroundColor: '#558aed',
-  width: '100%',
-  height: '10%'
-},
+        height: "100%",
+      }
     });
 
   
